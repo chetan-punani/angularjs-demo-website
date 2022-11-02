@@ -1,0 +1,15 @@
+<div class="main">
+    <div>
+        <input type="text" [(ngModel)]="value" (ngModelChange)="onTypeHandler()">
+    </div>
+    <div>
+        <button (click)="showSecOne =!showSecOne">Show Section One</button>
+        <button (click)="showSecTwo =!showSecTwo">Show Section Two</button>
+    </div>
+    <div *ngIf="!showSecOne">
+        <app-section-one></app-section-one>
+    </div>
+    <div *ngIf="!showSecTwo">
+        <app-section-two></app-section-two>
+    </div>
+</div>
