@@ -2,9 +2,20 @@
     <div>
         <input type="text" [(ngModel)]="value" (ngModelChange)="onTypeHandler()">
     </div>
+    <div [ngSwitch]="value">
+        <div *ngSwitchCase="'hello'">
+            <p>Hello</p>
+        </div>
+        <div *ngSwitchCase="'nothing'">
+            <p>nothing</p>
+        </div>
+        <div *ngSwitchDefault>
+            <p>Default</p>
+        </div>
+    </div>
     <div>
-        <button (click)="showSecOne =!showSecOne">Show Section One</button>
-        <button (click)="showSecTwo =!showSecTwo">Show Section Two</button>
+        <button (click)="showSecOne =!showSecOne" [ngStyle]="{'background-color': 'yellow'}">Show Section One</button>
+        <button (click)="showSecTwo =!showSecTwo" [ngClass]="{'bg-color': true}">Show Section Two</button>
     </div>
     <div *ngIf="!showSecOne">
         <app-section-one></app-section-one>
