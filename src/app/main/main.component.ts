@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class MainComponent {
 
   value: string = 'name';
-  showSecOne = false;
-  showSecTwo = false;
+  isShowSectionOne = false;
+  isShowSectionTwo = false;
 
   onTypeHandler() {
     console.log(this.value);

@@ -14,13 +14,13 @@
         </div>
     </div>
     <div>
-        <button (click)="showSecOne =!showSecOne" [ngStyle]="{'background-color': 'yellow'}">Show Section One</button>
-        <button (click)="showSecTwo =!showSecTwo" [ngClass]="{'bg-color': true}">Show Section Two</button>
+        <button (click)="isShowSectionOne =!isShowSectionOne" [ngStyle]="{'background-color': 'yellow'}">Show Section One</button>
+        <button (click)="isShowSectionTwo =!isShowSectionTwo" [ngClass]="{'bg-color': true}">Show Section Two</button>
     </div>
-    <div *ngIf="!showSecOne">
+    <div *ngIf="!isShowSectionOne">
         <app-section-one></app-section-one>
     </div>
-    <div *ngIf="!showSecTwo">
+    <div *ngIf="!isShowSectionTwo">
         <app-section-two></app-section-two>
     </div>
 </div>
